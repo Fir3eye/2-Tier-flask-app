@@ -1,16 +1,16 @@
  
-# Flask App with MySQL Docker Setup
+# 📢Flask App with MySQL Docker Setup🚀
 
 This is a simple Flask app that interacts with a MySQL database. The app allows users to submit messages, which are then stored in the database and displayed on the frontend.
 
-## Prerequisites
+## 🎢Prerequisites🎢
 
 Before you begin, make sure you have the following installed:
 
-- Docker
-- Git (optional, for cloning the repository)
+- 🚩Docker
+- 🚩Git (optional, for cloning the repository)
 
-## Setup
+## 🎡Setup🎡
 
 1. Clone this repository (if you haven't already):
 
@@ -39,7 +39,7 @@ Before you begin, make sure you have the following installed:
    MYSQL_DB=your_database
    ```
 
-## Usage
+## 🎯Usage🎯
 
 1. Start the containers using Docker Compose:
 
@@ -49,8 +49,8 @@ Before you begin, make sure you have the following installed:
 
 2. Access the Flask app in your web browser:
 
-   - Frontend: http://localhost
-   - Backend: http://localhost:5000
+   - 🚩Frontend: http://localhost
+   - 🚩Backend: http://localhost:5000
 
 3. Create the `messages` table in your MySQL database:
 
@@ -68,7 +68,7 @@ Before you begin, make sure you have the following installed:
    - Visit http://localhost to see the frontend. You can submit new messages using the form.
    - Visit http://localhost:5000/insert_sql to insert a message directly into the `messages` table via an SQL query.
 
-## Cleaning Up
+## 🎡Cleaning Up🎡
 
 To stop and remove the Docker containers, press `Ctrl+C` in the terminal where the containers are running, or use the following command:
 
@@ -99,15 +99,15 @@ ii) Backend container
 docker run -d --name flaskapp -v mysql-data:/var/lib/mysql -v ./message.sql:/docker-entrypoint-initdb.d/message.sql --network=twotier -e MYSQL_HOST=mysql -e MYSQL_USER=root -e MYSQL_PASSWORD=admin -e MYSQL_DB=mydb -p 5000:5000 flaskapp:latest
 ```
 
-## Notes
+## 📒Notes📒
 
-- Make sure to replace placeholders (e.g., `your_username`, `your_password`, `your_database`) with your actual MySQL configuration.
+- 🚩Make sure to replace placeholders (e.g., `your_username`, `your_password`, `your_database`) with your actual MySQL configuration.
 
-- This is a basic setup for demonstration purposes. In a production environment, you should follow best practices for security and performance.
+- 🚩This is a basic setup for demonstration purposes. In a production environment, you should follow best practices for security and performance.
 
-- Be cautious when executing SQL queries directly. Validate and sanitize user inputs to prevent vulnerabilities like SQL injection.
+- 🚩Be cautious when executing SQL queries directly. Validate and sanitize user inputs to prevent vulnerabilities like SQL injection.
 
-- If you encounter issues, check Docker logs and error messages for troubleshooting.
+- 🚩If you encounter issues, check Docker logs and error messages for troubleshooting.
 
 ```
 
